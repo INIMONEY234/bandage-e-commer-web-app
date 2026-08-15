@@ -1,0 +1,152 @@
+.posts-section {
+  padding: 2rem;
+  width: 100%;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  text-align: left;
+  align-items: center;
+  width: 100%;
+}
+
+.post-card {
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  width: 348px;
+  height: 506px;
+  background: #ffffff;
+}
+
+.post-img-wrapper {
+  position: relative;
+  margin: auto;
+}
+
+.post-img-wrapper img {
+  display: block;
+  object-fit: cover;
+  width: 348px;
+  height: 300px;
+}
+
+.tag-new {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 3px 8px;
+  border-radius: 3px;
+  background: #e74c3c;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.post-content {
+  padding: 1.2rem;
+}
+
+.post-tags {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 0.7rem;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+.post-tags .active {
+  color: var(--primary-blue);
+}
+
+.post-content h4 {
+  margin-bottom: 0.7rem;
+  color: var(--text-dark);
+  line-height: 30px;
+  font-size: 20px;
+}
+
+.post-content p {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.post-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 1rem 0;
+  color: var(--text-muted);
+  font-size: 0.7rem;
+}
+
+.post-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.post-meta svg {
+  width: 14px;
+  height: 14px;
+}
+
+.learn-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #737373;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.learn-more svg {
+  width: 15px;
+  height: 15px;
+  color: #23A6F0;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .posts-section {
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .posts-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 20px;
+  }
+
+  .post-card {
+    width: 330px;
+    max-width: calc(100vw - 32px);
+    height: 520px;
+
+    margin: 0 auto;
+
+    background: #ffffff;
+  }
+
+  .post-img-wrapper img {
+    display: block;
+
+    width: 100%;
+    height: 260px;
+
+    object-fit: cover;
+  }
+}

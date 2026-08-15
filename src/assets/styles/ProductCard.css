@@ -1,0 +1,147 @@
+.product-card {
+  background: #fff;
+  text-align: center;
+  width: 183px;
+  height: 400px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.06);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  z-index: 2;
+  position: relative;
+}
+
+.add-to-cart-btn {
+  display: block;
+  margin: 0.6rem auto 0;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #23a6f0;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+
+  opacity: 0;
+  transform: translateY(6px);
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.25s ease, transform 0.25s ease, max-height 0.25s ease;
+}
+
+.product-card:hover .add-to-cart-btn {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 40px;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #1a8ad4;
+}
+
+
+.product-img {
+  width: 100%;
+  height: 238px;
+  object-fit: cover;
+}
+
+.product-title {
+  margin-top: 0.8rem;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+}
+
+.product-dept {
+  margin: 0.3rem 0;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.old-price {
+  margin-right: 8px;
+  color: #bdbdbd;
+  text-decoration: line-through;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  text-align: center;
+}
+
+.new-price {
+  color: #23856d;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   MOBILE PRODUCT CARDS
+========================================================= */
+
+@media (max-width: 768px) {
+  .product-card {
+    width: 240px;
+    max-width: calc(100vw - 32px);
+    height: 430px;
+
+    margin: 0 auto 80px;
+
+    text-align: center;
+  }
+
+  .product-img {
+    width: 100%;
+    height: 293px;
+
+    object-fit: cover;
+    display: block;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .product-card {
+    width: 240px;
+    max-width: calc(100vw - 32px);
+
+    height: 430px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+
+    text-align: center;
+  }
+
+  .product-img {
+    width: 100%;
+    height: 293px;
+
+    object-fit: cover;
+    display: block;
+  }
+}

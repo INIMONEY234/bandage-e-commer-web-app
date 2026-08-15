@@ -1,0 +1,248 @@
+/* cta.css */
+
+.cta-banner {
+  width: 100%;
+  height: 640px;
+  background-image: url("../images/background.png"); /* Adjust path if needed */
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.cta-container {
+  max-width: 620px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Subtitle */
+.cta-subtitle {
+  color: var(--primary-blue, #23a6f0);
+  font-size: 0.875rem; /* 14px */
+  font-weight: 700;
+  margin: 0 0 1.25rem 0;
+  letter-spacing: 0.2px;
+}
+
+/* Main Title */
+.cta-title {
+  color: var(--text-dark, #252b42);
+  font-size: 2.5rem; /* 40px */
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 1.25rem 0;
+  letter-spacing: 0.1px;
+}
+
+/* Description */
+.cta-description {
+  color: var(--text-muted, #737373);
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.5;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: 0.2px;
+}
+
+/* Price */
+.cta-price {
+  display: block;
+  color: var(--dark-teal, #23856d);
+  font-size: 1.5rem; /* 24px */
+  font-weight: 700;
+  margin-bottom: 2rem;
+  letter-spacing: 0.1px;
+}
+
+/* CTA Button */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 2.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primary-blue, #23a6f0);
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-primary:hover {
+  background-color: #fff;
+  color: #1b8cd1;
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+
+
+
+
+
+
+
+
+/* =========================
+   MOBILE CTA
+========================= */
+
+@media (max-width: 768px) {
+  .cta-banner {
+    width: 100%;
+    height: 575px;
+
+    margin: 0;
+    padding: 0 20px;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+  }
+
+  .cta-container {
+    width: 100%;
+    max-width: 330px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+  }
+
+  /* Subtitle */
+  .cta-subtitle {
+    margin: 0 0 28px;
+
+    font-size: 12px;
+    line-height: 1.4;
+    font-weight: 700;
+
+    text-align: center;
+  }
+
+  /* Main title */
+  .cta-title {
+    max-width: 320px;
+
+    margin: 0 0 28px;
+
+    font-size: 32px;
+    line-height: 1.27;
+    font-weight: 700;
+
+    text-align: center;
+  }
+
+  /* Price */
+  .cta-price {
+    margin: 0 0 24px;
+
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 700;
+
+    text-align: center;
+  }
+
+  /* Description */
+  .cta-description {
+    max-width: 285px;
+
+    margin: 0 0 25px;
+
+    font-size: 12px;
+    line-height: 1.45;
+
+    text-align: center;
+  }
+
+  /* Button */
+  .btn-primary {
+    width: 232px;
+    height: 43px;
+
+    padding: 0;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    border-radius: 5px;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .cta-banner {
+    height: 575px;
+    padding: 0 20px;
+    background-position: center;
+    background-size: 250% 100%;
+  }
+
+  .cta-container {
+    max-width: 330px;
+  }
+
+  .cta-subtitle {
+    margin-bottom: 28px;
+    font-size: 14px;
+  }
+
+  .cta-title {
+    max-width: 370px;
+    margin-bottom: 28px;
+    font-size: 42px;
+    line-height: 50px;
+    text-align: center;
+  }
+
+  .cta-price {
+    margin-bottom: 24px;
+    font-size: 24px;
+  }
+
+  .cta-description {
+    max-width: 285px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .btn-primary {
+    width: 232px;
+    height: 43px;
+    font-size: 14px;
+  }
+}

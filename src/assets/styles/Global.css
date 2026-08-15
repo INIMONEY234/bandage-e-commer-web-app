@@ -1,0 +1,104 @@
+/* =========================
+   Global Reset & Variables
+========================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-blue: #23a6f0;
+  --dark-teal: #23856d;
+  --text-dark: #252b42;
+  --text-muted: #737373;
+  --bg-light: #f9f9f9;
+  --border-color: #e6e6e6;
+}
+
+html, body {
+  width: 100%;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: Montserrat, sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.6rem 2rem;
+}
+
+/* =========================================================
+   PAGE HEADERS (Shop / Cart)
+========================================================= */
+
+.shop-header,
+.cart-header {
+  width: 100%;
+  padding: 3rem 2rem;
+  text-align: center;
+  background: #f8f8f8;
+}
+
+.shop-header h1,
+.cart-header h1 {
+  margin: 0 0 0.75rem;
+  color: var(--text-dark);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.shop-header p,
+.cart-header p {
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   SECTION HEADERS (shared: ProductList, Posts, Services)
+========================================================= */
+
+.section-header {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.subtitle {
+  color: #737373;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.2px;
+  text-align: center;
+}
+
+.main-title {
+  margin: 0.5rem 0;
+  color: #252b42;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+  text-align: center;
+}
+
+.description {
+  color: #737373;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .top-banner-center {
+    display: none;
+  }
+}
