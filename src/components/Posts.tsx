@@ -4,7 +4,7 @@ import { SlArrowRight } from "react-icons/sl";
 
 import { FaChartArea } from "react-icons/fa";
 
-import "../assets/styles/posts.css";
+import "../assets/styles/Posts.css";
 
 
 import post1 from "../assets/images/post1.png";

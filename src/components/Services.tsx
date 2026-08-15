@@ -4,7 +4,7 @@ import openBook from "../assets/images/openBook.svg"
 
 import carbon_book from "../assets/images/carbon_book.png";
 
-import "../assets/styles/services.css";
+import "../assets/styles/Services.css";
 
 export function Services() {
   const services = [

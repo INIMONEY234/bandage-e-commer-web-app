@@ -1,4 +1,4 @@
-import "../assets/styles/cta.css";
+import "../assets/styles/CTA.css";
 
 
 export function CTA() {

@@ -1,7 +1,7 @@
 import { FiStar } from "react-icons/fi";
 import { RiStarSLine } from "react-icons/ri";
 
-import "../assets/styles/testimonials.css";
+import "../assets/styles/Testimonials.css";
 
 import ReginaMiles from "../assets/images/ReginaMiles.png";
 
