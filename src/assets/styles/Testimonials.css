@@ -3,9 +3,10 @@
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 40px;
-  padding: 0 8rem;
-  margin: 6rem 0;
-  width: 100%;
+  padding: 0 2rem;
+  margin: 6rem auto;
+  width: 90%;
+  max-width: 1200px;
 }
 
 .testimonial-content {
@@ -82,6 +83,11 @@
 
 
 
+
+
+
+
+
 /* =========================
    MOBILE TESTIMONIAL
 ========================= */
@@ -90,12 +96,11 @@
   .testimonials-section {
     width: 100%;
     padding: 60px 20px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    margin: auto;
     text-align: center;
     box-sizing: border-box;
   }
@@ -104,12 +109,10 @@
   .testimonial-content {
     width: 100%;
     max-width: 320px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     margin: 0 auto;
     text-align: center;
   }
@@ -118,14 +121,11 @@
   .testimonial-content h2 {
     width: 100%;
     max-width: 230px;
-
     margin: 0 auto 46px;
-
     color: #252b42;
     font-size: 22px;
     line-height: 1.25;
     font-weight: 700;
-
     text-align: center;
   }
 
@@ -133,13 +133,10 @@
   .avatar {
     width: 74px;
     height: 74px;
-
     margin: 0 auto 17px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 50%;
     overflow: hidden;
   }
@@ -147,7 +144,6 @@
   .avatar img {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
     display: block;
   }
@@ -157,16 +153,13 @@
     display: flex !important;
     align-items: center;
     justify-content: center;
-
     gap: 5px !important;
-
     margin: 0 auto 17px;
   }
 
   .stars svg {
     width: 18px;
     height: 18px;
-
     color: #ffc107;
   }
 
@@ -174,19 +167,15 @@
   .testimonial-text {
     width: 100%;
     max-width: 280px;
-
     margin: 0 auto 18px;
-
     color: #737373;
-
     font-size: 12px;
     font-weight: 600;
     line-height: 1.65;
-
     text-align: center;
   }
 
-  /* Remove the desktop <br> effect */
+  /* Remove desktop <br> effect */
   .testimonial-text br {
     display: none;
   }
@@ -194,30 +183,42 @@
   /* Author */
   .author {
     margin: 0 0 5px;
-
     color: #23a6f0;
-
     font-size: 13px;
     font-weight: 700;
-
     text-align: center;
   }
 
   /* Role */
   .role {
     margin: 0;
-
     color: #252b42;
-
     font-size: 12px;
     font-weight: 700;
-
     text-align: center;
   }
 
-  /* Hide gallery on mobile */
+  /* =========================
+     GALLERY
+  ========================= */
+
   .gallery-grid {
-    display: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    width: 100%;
+    max-width: 320px;
+    margin: 50px auto 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gallery-grid img {
+    object-fit: cover;
+    display: block;
+    width: 112px;
+height: 112px;
+
   }
 }
 
@@ -229,24 +230,20 @@
 @media (max-width: 480px) {
   .testimonials-section {
     width: 100%;
-    min-height: 470px;
-
+    min-height: auto;
     padding: 55px 20px 45px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     text-align: center;
+    box-sizing: border-box;
   }
 
   .testimonial-content {
     width: 100%;
     max-width: 300px;
-
     margin: 0 auto;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -255,16 +252,12 @@
   /* Heading */
   .testimonial-content h2 {
     max-width: 220px;
-
     margin: 0 auto 46px;
-
     font-size: 24px;
     line-height: 1.25;
-
     text-align: center;
     width: 181px;
-height: 64px;
-
+    height: 64px;
   }
 
   /* Avatar */
@@ -284,7 +277,6 @@ height: 64px;
     width: 22px;
     height: 22px;
     color: #ffc107;
-    gap: 5px;
   }
 
   /* Text */
@@ -297,7 +289,7 @@ height: 64px;
     text-align: center;
     width: 100%;
     height: 72px;
-}
+  }
 
   .testimonial-text br {
     display: none;
@@ -309,19 +301,35 @@ height: 64px;
     margin-bottom: 5px;
     font-size: 14px;
     width: 93px;
-height: 24px;
-
+    height: 24px;
   }
 
   /* Role */
   .role {
     font-size: 14px;
     width: 65px;
-height: 24px;
-}
+    height: 24px;
+  }
 
-  /* Hide gallery */
+  /* =========================
+     GALLERY - 3 IMAGES PER ROW
+  ========================= */
+
   .gallery-grid {
-    display: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    width: 100%;
+    max-width: 320px;
+    margin: 50px auto 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gallery-grid img {
+    object-fit: cover;
+    display: block;
+    width: 112px;
+height: 112px;
   }
 }
