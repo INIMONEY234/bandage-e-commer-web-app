@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import { Link } from "react-router-dom";
+
 import { useAppDispatch, useAppSelector } from "../app/hooks";
 
 import {
@@ -75,35 +77,35 @@ export default function ShoppingCart() {
    */
 
   if (cartItems.length === 0) {
-    return (
-      <section className="shopping-cart empty-cart">
+  return (
+    <section className="shopping-cart empty-cart">
 
-        <div className="empty-cart-content">
+      <div className="empty-cart-content">
 
-          <h1>
-            {paymentSuccessful
-              ? "Payment Successful!"
-              : "Your Cart Is Empty"}
-          </h1>
+        <h1>
+          {paymentSuccessful
+            ? "Payment Successful!"
+            : "Your Cart Is Empty"}
+        </h1>
 
-          <p>
-            {paymentSuccessful
-              ? "Thank you for your purchase. Your order has been successfully processed."
-              : "You haven't added any products to your cart yet."}
-          </p>
+        <p>
+          {paymentSuccessful
+            ? "Thank you for your purchase. Your order has been successfully processed."
+            : "You haven't added any products to your cart yet."}
+        </p>
 
-          <a
-            href="/shop"
-            className="continue-shopping-btn"
-          >
-            Continue Shopping
-          </a>
+        <Link
+          to="/shop"
+          className="continue-shopping-btn"
+        >
+          Continue Shopping
+        </Link>
 
-        </div>
+      </div>
 
-      </section>
-    );
-  }
+    </section>
+  );
+}
 
   /*
    * =========================

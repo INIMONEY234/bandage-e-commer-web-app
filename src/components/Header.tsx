@@ -30,27 +30,16 @@ import "../assets/styles/Global.css";
 import "../assets/styles/Header.css";
 
 export function Header() {
-  /* =========================
-     Mobile Menu State
-  ========================== */
+
+
   const [menuOpen, setMenuOpen] = useState(false);
 
-  /* =========================
-     Get Cart From Redux
-  ========================== */
+
   const cartItems = useAppSelector(
     (state) => state.cart.items
   );
 
-  /*
-   * Total number of products in the cart.
-   *
-   * Example:
-   * Product A × 2
-   * Product B × 1
-   *
-   * Cart count = 3
-   */
+
   const cartCount = cartItems.reduce(
     (total, item) => total + item.quantity,
     0

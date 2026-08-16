@@ -16,21 +16,7 @@ export const ProductList: React.FC<ProductListProps> = ({
 
   const [currentPage, setCurrentPage] = useState(1);
 
-  /*
-   * Instead of requesting:
-   *
-   * page 1 = 10
-   * page 2 = next 10
-   * page 3 = next 10
-   *
-   * we request:
-   *
-   * page 1 = 10
-   * page 2 = 20
-   * page 3 = 30
-   *
-   * This means we don't need another allProducts state.
-   */
+  
   const limit = currentPage * productsPerPage;
 
   const {
