@@ -373,8 +373,19 @@ header {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
 /* =========================================================
-   MOBILE
+   MOBILE NAVBAR
 ========================================================= */
 
 @media (max-width: 768px) {
@@ -384,10 +395,7 @@ header {
   ----------------------------------------- */
 
   .top-banner-container {
-    min-height: 48px;
-    padding: 0 20px;
     display: none;
-    justify-content: center;
   }
 
   .top-banner-left,
@@ -395,42 +403,51 @@ header {
     display: none;
   }
 
-  .top-banner-center {
-    flex: none;
-    font-size: 12px;
-    text-align: center;
-  }
-
 
   /* -----------------------------------------
      NAVBAR
   ----------------------------------------- */
 
+  .navbar {
+    width: 100%;
+    background: #ffffff;
+  }
+
   .nav-container {
+    width: 100%;
+    height: 70px;
+
     padding: 0 20px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
     position: relative;
-    font-size: 30px;
-    color: #737373;
-font-weight: 400;
-line-height: 45px;
-letter-spacing: 0.2px;
-text-align: center;
-width: 100%;
-height: 45px;
-}
+  }
 
 
   /* -----------------------------------------
-     LOGO
+     BRAND LOGO
   ----------------------------------------- */
 
   .brand-logo {
-    font-size: 24px;
-    color: #252B42;
-  }
+    display: flex;
+    align-items: center;
 
-  .icon-btn {
-    color: #252B42;
+    flex-shrink: 0;
+
+    margin: 0;
+
+    color: #252b42;
+
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+
+    text-decoration: none;
   }
 
 
@@ -444,28 +461,22 @@ height: 45px;
 
 
   /* -----------------------------------------
-     NAV ACTIONS
-
-     ORDER:
-     Search
-     Cart
-     Wishlist
-     Hamburger
+     NAVIGATION ACTIONS
   ----------------------------------------- */
 
   .nav-actions {
-    margin-left: auto;
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 30px;
-    color: #737373;
-    padding-bottom: 30px;
+    justify-content: flex-end;
+
+    gap: 6px;
+
+    margin-left: auto;
   }
 
 
   /* -----------------------------------------
-     LOGIN HIDDEN ON MOBILE
+     HIDE LOGIN
   ----------------------------------------- */
 
   .login-link {
@@ -474,40 +485,113 @@ height: 45px;
 
 
   /* -----------------------------------------
-     SEARCH
+     SEARCH, CART & WISHLIST
   ----------------------------------------- */
 
-  .nav-actions .icon-btn:nth-of-type(1) {
+  .nav-actions .icon-btn {
+    width: 38px;
+    height: 38px;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    background: transparent;
+
+    color: #252b42;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+  }
+
+  .nav-actions .icon-btn svg {
+    width: 21px;
+    height: 21px;
+  }
+
+
+  /* -----------------------------------------
+     KEEP SEARCH, CART & WISHLIST VISIBLE
+  ----------------------------------------- */
+
+  .nav-actions > .icon-btn {
+    display: flex;
+  }
+
+  .nav-actions .action-with-count {
     display: flex;
   }
 
 
   /* -----------------------------------------
-     CART
+     CART / WISHLIST COUNT
   ----------------------------------------- */
 
-  .nav-actions .icon-btn:nth-of-type(2) {
+  .nav-actions .action-with-count {
+    position: relative;
+  }
+
+  .nav-actions .action-with-count .count {
+    position: absolute;
+
+    top: 0;
+    right: -2px;
+
+    min-width: 15px;
+    height: 15px;
+
+    padding: 0 3px;
+
     display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #23a6f0;
+    color: #ffffff;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    line-height: 1;
   }
 
 
   /* -----------------------------------------
-     WISHLIST
-  ----------------------------------------- */
-
-  .nav-actions .icon-btn:nth-of-type(3) {
-    display: none;
-  }
-
-
-  /* -----------------------------------------
-     MOBILE TOGGLE
+     MOBILE MENU TOGGLE
   ----------------------------------------- */
 
   .mobile-toggle {
     display: flex;
 
-    margin-left: 2px;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    padding: 0;
+
+    border: none;
+    background: transparent;
+
+    color: #252b42;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+  }
+
+  .mobile-toggle svg {
+    width: 25px;
+    height: 25px;
   }
 
 
@@ -520,94 +604,51 @@ height: 45px;
 
     top: 70px;
     left: 0;
-    right: 0;
 
     width: 100%;
 
     margin: 0;
-    padding: 25px 20px;
+    padding: 20px;
 
-    list-style: none;
-
-    background: #ffffff;
-
-    border-top: 1px solid #eeeeee;
-    border-bottom: 1px solid #eeeeee;
-
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
 
     display: none;
 
     flex-direction: column;
     align-items: center;
 
-    gap: 22px;
+    gap: 20px;
 
-    z-index: 999;
+    background: #ffffff;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+    z-index: 1000;
   }
 
-
-  /* Show when hamburger is clicked */
   .mobile-nav-links.active {
     display: flex;
   }
 
-
-  /* -----------------------------------------
-     MOBILE LINKS
-  ----------------------------------------- */
-
   .mobile-nav-links li {
     width: 100%;
-
-    margin: 0;
-    padding: 0;
-
+    list-style: none;
     text-align: center;
   }
 
   .mobile-nav-links a {
     display: block;
 
-    width: 100%;
-
     color: #252b42;
 
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
 
     text-decoration: none;
-
-    padding: 5px 0;
-
-    transition: color 0.2s ease;
   }
 
   .mobile-nav-links a:hover {
     color: #23a6f0;
-  }
-
-
-  /* -----------------------------------------
-     ICON SIZE
-  ----------------------------------------- */
-
-  .icon-btn {
-    width: 32px;
-    height: 32px;
-  }
-
-  .icon-btn svg {
-    font-size: 19px;
-  }
-
-  .mobile-toggle {
-    width: 34px;
-    height: 34px;
-  }
-
-  .mobile-toggle svg {
-    font-size: 25px;
   }
 }
 
@@ -618,49 +659,43 @@ height: 45px;
 
 @media (max-width: 480px) {
 
-  .top-banner-center {
-    font-size: 11px;
-  }
-
   .nav-container {
-    padding: 0 16px;
+    width: 100%;
+    height: 65px;
+
+    padding: 0 12px;
   }
 
   .brand-logo {
-    font-size: 21px;
+    font-size: 22px;
   }
 
   .nav-actions {
-    gap: 5px;
+    gap: 2px;
   }
 
-  .icon-btn {
-    width: 30px;
-    height: 30px;
+  .nav-actions .icon-btn {
+    width: 34px;
+    height: 34px;
   }
 
-  .icon-btn svg {
-    font-size: 18px;
+  .nav-actions .icon-btn svg {
+    width: 19px;
+    height: 19px;
   }
 
   .mobile-toggle {
-    width: 32px;
-    height: 32px;
-
-    margin-left: 1px;
-  }
-
-  .mobile-toggle svg {
+    width: 34px;
+    height: 34px;
     font-size: 23px;
   }
 
-  .count {
-    top: -4px;
-    right: -6px;
+  .mobile-toggle svg {
+    width: 23px;
+    height: 23px;
+  }
 
-    min-width: 15px;
-    height: 15px;
-
-    font-size: 8px;
+  .mobile-nav-links {
+    top: 65px;
   }
 }

@@ -4,6 +4,8 @@ import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 
 import HomePage from "./pages/Homepage";
+import Shop from "./pages/Shop";
+import ShoppingCart from "./pages/ShoppingCart";
 
 import "./App.css";
 
@@ -16,6 +18,8 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/cart" element={<ShoppingCart />} />
           </Routes>
         </main>
 

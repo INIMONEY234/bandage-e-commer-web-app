@@ -14,8 +14,6 @@ import {
 } from "react-icons/fi";
 
 import { FaRegUser } from "react-icons/fa6";
-
-
 import { HiMenuAlt3 } from "react-icons/hi";
 
 import {
@@ -26,6 +24,8 @@ import {
 
 import { Link } from "react-router-dom";
 
+import { useAppSelector } from "../app/hooks";
+
 import "../assets/styles/Global.css";
 import "../assets/styles/Header.css";
 
@@ -34,6 +34,27 @@ export function Header() {
      Mobile Menu State
   ========================== */
   const [menuOpen, setMenuOpen] = useState(false);
+
+  /* =========================
+     Get Cart From Redux
+  ========================== */
+  const cartItems = useAppSelector(
+    (state) => state.cart.items
+  );
+
+  /*
+   * Total number of products in the cart.
+   *
+   * Example:
+   * Product A × 2
+   * Product B × 1
+   *
+   * Cart count = 3
+   */
+  const cartCount = cartItems.reduce(
+    (total, item) => total + item.quantity,
+    0
+  );
 
   /* =========================
      Close Mobile Menu
@@ -72,19 +93,31 @@ export function Header() {
           <div className="top-banner-right">
             <span>Follow Us :</span>
 
-            <a href="#instagram" aria-label="Instagram">
+            <a
+              href="#instagram"
+              aria-label="Instagram"
+            >
               <FiInstagram />
             </a>
 
-            <a href="#youtube" aria-label="YouTube">
+            <a
+              href="#youtube"
+              aria-label="YouTube"
+            >
               <FaYoutube />
             </a>
 
-            <a href="#facebook" aria-label="Facebook">
+            <a
+              href="#facebook"
+              aria-label="Facebook"
+            >
               <FaFacebook />
             </a>
 
-            <a href="#twitter" aria-label="Twitter">
+            <a
+              href="#twitter"
+              aria-label="Twitter"
+            >
               <FaTwitter />
             </a>
           </div>
@@ -110,7 +143,6 @@ export function Header() {
 
           {/* =========================
               DESKTOP NAVIGATION
-              Product & Pricing NOT HERE
           ========================== */}
           <div className="nav-menu">
 
@@ -122,7 +154,7 @@ export function Header() {
             </Link>
 
             <Link
-              to="/"
+              to="/shop"
               className="dropdown"
               onClick={closeMenu}
             >
@@ -162,7 +194,6 @@ export function Header() {
 
           {/* =========================
               MOBILE NAVIGATION
-              Product & Pricing SHOW HERE
           ========================== */}
           <ul
             className={`mobile-nav-links ${
@@ -180,7 +211,7 @@ export function Header() {
 
             <li>
               <Link
-                to="/"
+                to="/shop"
                 onClick={closeMenu}
               >
                 Product
@@ -189,7 +220,7 @@ export function Header() {
 
             <li>
               <Link
-                to="/"
+                to="/shop"
                 onClick={closeMenu}
               >
                 Pricing
@@ -230,18 +261,23 @@ export function Header() {
               <FiSearch />
             </button>
 
-            {/* Cart */}
-            <button
-              type="button"
+            {/* =========================
+                Shopping Cart
+            ========================== */}
+            <Link
+              to="/cart"
               className="icon-btn action-with-count"
-              aria-label="Shopping Cart"
+              aria-label={`Shopping Cart, ${cartCount} items`}
+              onClick={closeMenu}
             >
               <FiShoppingCart />
 
-              <span className="count">
-                1
-              </span>
-            </button>
+              {cartCount > 0 && (
+                <span className="count">
+                  {cartCount}
+                </span>
+              )}
+            </Link>
 
             {/* Wishlist */}
             <button
