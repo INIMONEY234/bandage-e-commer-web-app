@@ -22,7 +22,7 @@
   width: 100%;
   max-width: 1150px;
   height: auto;
-  margin: 20px auto 40px;
+  margin: -10px auto 40px;
   display: grid;
   grid-template-columns:
     1fr
