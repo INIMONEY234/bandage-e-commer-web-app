@@ -23,7 +23,7 @@
   max-width: 1150px;
   height: auto;
   margin: -10px auto 40px;
-  transform: translateX(-12px);
+  transform: translateX(-16px);
   display: grid;
   grid-template-columns:
     1fr
