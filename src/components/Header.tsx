@@ -271,7 +271,7 @@ export function Header() {
             {/* Wishlist */}
             <button
               type="button"
-              className="icon-btn action-with-count"
+              className="icon-btn action-with-count wishlist-btn"
               aria-label="Wishlist"
             >
               <FiHeart />

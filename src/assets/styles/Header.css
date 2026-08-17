@@ -384,6 +384,7 @@ header {
 
 
 
+
 /* =========================================================
    MOBILE NAVBAR
 ========================================================= */
@@ -493,6 +494,7 @@ header {
     height: 38px;
 
     padding: 0;
+    
 
     display: flex;
     align-items: center;
@@ -524,6 +526,10 @@ header {
 
   .nav-actions .action-with-count {
     display: flex;
+  }
+
+    .nav-actions .wishlist-btn {
+    display: none !important;
   }
 
 
@@ -682,6 +688,10 @@ header {
   .nav-actions .icon-btn svg {
     width: 19px;
     height: 19px;
+  }
+
+    .nav-actions .wishlist-btn {
+    display: none !important;
   }
 
   .mobile-toggle {
