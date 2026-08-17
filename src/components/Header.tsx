@@ -1,5 +1,3 @@
-// src/components/Header.tsx
-
 import { useState } from "react";
 
 import {
