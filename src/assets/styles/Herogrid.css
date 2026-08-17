@@ -23,6 +23,7 @@
   max-width: 1150px;
   height: auto;
   margin: -10px auto 40px;
+  transform: translateX(-10px);
   display: grid;
   grid-template-columns:
     1fr
@@ -147,7 +148,6 @@
 
 
 
-
 /* =========================
    Responsive
 ========================= */
@@ -164,6 +164,7 @@
     max-width: none;
     margin: 0;
     padding: 0;
+    transform: none;
   }
 }
 
@@ -183,6 +184,7 @@
     max-width: none;
     margin: 0;
     padding: 0;
+    transform: none;
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -232,6 +234,7 @@
 
     margin: 0;
     padding: 0;
+    transform: none;
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -312,6 +315,7 @@
 
     margin: 0;
     padding: 0;
+    transform: none;
 
     display: grid;
     grid-template-columns: 1fr;
