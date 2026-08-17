@@ -1,6 +1,6 @@
 import { FiTrendingUp } from "react-icons/fi";
 
-import openBook from "../assets/images/openBook.svg"
+import openBook from "../assets/images/openBook.svg";
 
 import carbon_book from "../assets/images/carbon_book.png";
 
@@ -52,13 +52,13 @@ export function Services() {
               paddingLeft: "40px",
               gap: "20px",
             }}
-          > 
+          >
             <div
               className="service-icon"
               style={{
                 width: "72px",
                 height: "72px",
-                marginLeft: "105px",
+                margin: "0 auto 2rem",
               }}
             >
               {service.icon}
