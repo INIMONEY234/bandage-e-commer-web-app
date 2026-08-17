@@ -7,7 +7,7 @@
   padding: 32px 95px 32px 95px;
   margin: 0;
   background: #ffffff;
-  width: 100%;
+  width: 1150px;
   height: 776px;
   opacity: 1;
   top: 4px;
@@ -23,7 +23,7 @@
   max-width: 1150px;
   height: auto;
   margin: -10px auto 40px;
-  transform: translateX(-10px);
+  transform: translateX(-20px);
   display: grid;
   grid-template-columns:
     1fr
