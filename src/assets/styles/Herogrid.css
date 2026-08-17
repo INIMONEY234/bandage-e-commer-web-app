@@ -2,18 +2,21 @@
    HERO CATEGORY SECTION
 ========================================================= */
 
+
 .hero-section {
   padding: 32px 95px 32px 95px;
   margin: 0;
   background: #ffffff;
-  width: 1146px;
-height: 776px;
-opacity: 1;
-top: 4px;
-left: 147px;
-padding-top: 80px;
-padding-bottom: 80px;
+  width: 100%;
+  height: 776px;
+  opacity: 1;
+  top: 4px;
+  left: 147px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  box-sizing: border-box;
 }
+
 
 .hero-grid {
   width: 100%;
@@ -29,9 +32,11 @@ padding-bottom: 80px;
   gap: 12px;
 }
 
+
 /* =========================
    Category Cards
 ========================= */
+
 
 .category-card {
   position: relative;
@@ -43,12 +48,14 @@ padding-bottom: 80px;
   background-repeat: no-repeat;
 }
 
+
 .category-card-large {
   grid-column: 1;
   grid-row: 1 / 3;
   min-height: 616px;
   width: 452px;
 }
+
 
 .category-card-wide {
   grid-column: 2 / 4;
@@ -57,12 +64,14 @@ padding-bottom: 80px;
   width: 679px;
 }
 
+
 .category-card:nth-child(3) {
   grid-column: 2;
   grid-row: 2;
   min-height: 300px;
   width: 332px;
 }
+
 
 .category-card:nth-child(4) {
   grid-column: 3;
@@ -71,9 +80,11 @@ padding-bottom: 80px;
   width: 332px;
 }
 
+
 /* =========================
    Category Overlay
 ========================= */
+
 
 .category-overlay {
   position: absolute;
@@ -85,6 +96,7 @@ padding-bottom: 80px;
   padding: 14px 18px;
 }
 
+
 .category-count {
   margin: 0 0 4px;
   color: var(--dark-teal);
@@ -93,6 +105,7 @@ padding-bottom: 80px;
   font-weight: 700;
 }
 
+
 .category-title {
   margin: 0;
   color: var(--text-dark);
@@ -100,6 +113,7 @@ padding-bottom: 80px;
   line-height: 32px;
   font-weight: 700;
 }
+
 
 .category-link {
   display: inline-flex;
@@ -113,14 +127,19 @@ padding-bottom: 80px;
   text-decoration: none;
 }
 
+
 .category-link svg {
   width: 12px;
   height: 12px;
 }
 
+
 .category-link:hover {
   color: var(--primary-blue);
 }
+
+
+
 
 
 
